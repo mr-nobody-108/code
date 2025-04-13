@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Favorite Movies : Created by Raushan</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #0a0a0a;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+      }
+      header {
+        text-align: center;
+        margin: 30px 0 10px;
+        padding: 20px;
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+      }
+      header h1 {
+        font-size: 2.5em;
+        color: #ff007f;
+      }
+      main {
+        width: 90%;
+        max-width: 900px;
+        background: #111;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 0 40px #00ffff;
+      }
+      h2 {
+        text-align: center;
+        font-size: 2em;
+        color: #00ffff;
+        margin-bottom: 20px;
+      }
+      span h3 {
+        background-color: #222;
+        color: #ffff00;
+        padding: 12px;
+        border-left: 5px solid #ff0;
+        border-radius: 8px;
+        margin-bottom: 25px;
+      }
+
+      /* Colorful numbered movie links */
+      .movie-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+        background-color: #1a1a1a;
+        padding: 15px 25px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+        counter-increment: movie;
+      }
+      .movie-link:hover {
+        box-shadow: 0 0 40px rgba(255, 0, 255, 0.7),
+          0 0 60px rgba(0, 255, 255, 0.6);
+        transform: scale(1.05);
+      }
+
+      /* Create colorful numbers using a gradient for each movie */
+      .movie-link::before {
+        content: counter(movie) ". ";
+        font-size: 1.5em;
+        font-weight: bold;
+        background: linear-gradient(45deg, #ff007f, #00ffff, #ff0, #970ecd, #0d1fe4);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        padding-right: 10px;
+      }
+
+      .link-text {
+        color: rgb(44, 75, 254);
+        font-size: 17px;
+        font-weight: bold;
+        flex: 1;
+      }
+
+      .glow-btn {
+        text-decoration: none;
+        padding: 12px 20px;
+        background-color: #111;
+        color: white;
+        font-weight: bold;
+        border-radius: 999px;
+        position: relative;
+        overflow: hidden;
+        font-size: 16px;
+        z-index: 1;
+        box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+      }
+      .glow-btn::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(
+          270deg,
+          #75feae,
+          #fa7e1e,
+          #d62976,
+          #970ecd,
+          #0d1fe4
+        );
+        background-size: 600% 600%;
+        border-radius: 999px;
+        z-index: -1;
+        filter: blur(6px);
+        animation: neonLoop 2s linear infinite;
+      }
+      .glow-btn:hover {
+        transform: scale(1.1);
+      }
+
+      @keyframes neonLoop {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      footer {
+        text-align: center;
+        color: #888;
+        font-size: 0.9em;
+        padding: 20px;
+        margin-top: 40px;
+      }
+      footer a {
+        color: #ff00ff;
+        text-decoration: none;
+      }
+
+      /* Mobile responsiveness */
+      @media screen and (max-width: 600px) {
+        .movie-link {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 20px;
+        }
+
+        .link-text {
+          font-size: 15px;
+        }
+
+        .glow-btn {
+          align-self: center;
+          padding: 10px 18px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>🎬 Welcome to ̷M̷̷r̷.̷N̷̷o̷̷b̷̷o̷̷d̷̷y̷ Movie Paradise </h1>
+    </header>
+
+    <main>
+      <h2>🔥Explore Your🔥 Favorite Movie Links</h2>
+      <h2>🔎 Click on anyone link and Search your favorite movie 🔎 </h2>
+      <span><h3>⚠️ Please use a VPN for safe downloading ⚠️</h3></span>
+
+      <!-- Numbered Movie Links with Full Text -->
+      <div class="movie-link">
+        <div class="link-text">
+          Visit mkvmoviespoint – Download latest Bollywood, Hollywood, South
+          Indian movies in HD
+        </div>
+        <a href="https://www.mkvmoviespoint.day/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          Check out Filmyfly – Get top-rated movies in HD quality for free
+        </div>
+        <a href="https://filmyfly.golf/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          Get the latest movies on Movierulz – Fast streaming and downloads
+        </div>
+        <a href="https://www.movzrulz.com/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <!-- Continue adding more movie links in this format -->
+
+      <div class="movie-link">
+        <div class="link-text">
+          Visit 9xmovies – Amazing selection of Bollywood & Hollywood dual
+          audio films
+        </div>
+        <a href="https://www.9xmovies.boo/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          Explore Worldfree4u – Free HD movie streaming & download
+        </div>
+        <a href="https://worldfree4u.webflow.io/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <!-- More movie links here -->
+        <div class="movie-link">
+        <div class="link-text">
+          6. Khatrimaza – Download HD Bollywood, Hollywood, South Indian movies
+        </div>
+        <a href="https://thekhatrimaza.ag/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          7. Bolly4u – Watch and download movies in 300MB and 720p
+        </div>
+        <a href="https://bolly4u.review/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          8. Downloadhub – Stream or download latest HD movies for free
+        </div>
+        <a
+          href="https://www.downloadhub.website/"
+          class="glow-btn"
+          target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          9. Fzmovies – High-quality Bollywood & Hollywood movies
+        </div>
+        <a href="https://www.fzmovies.ng/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          10. KatmovieHD – Best site for dual audio & dubbed movies
+        </div>
+        <a href="https://worldfree4u.review/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          11. RdxHD – Quick downloads of new movies in HD print
+        </div>
+        <a href="https://rdxhd.blog/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          12. 7starHD – Latest dual audio and 300MB movies
+        </div>
+        <a href="https://7starhd.rs/" class="glow-btn" target="_blank">Click</a>
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          13. Moviesverse – HD quality South, Bollywood & more
+        </div>
+        <a href="https://themoviesverse.cloud/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          14. Jalshamoviez – Bengali, Hindi, and South movies hub
+        </div>
+        <a
+          href="https://www.jalshamoviez.travel.in/"
+          class="glow-btn"
+          target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          15. Todaypk – Fast downloading of latest Telugu movies
+        </div>
+        <a href="https://todaypk.com.in/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          16. Filmywap – Popular for regional and Hindi dubbed movies
+        </div>
+        <a href="https://www.filmywap.com.cy/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          17. Hdhub4u – Stream and download top trending films
+        </div>
+        <a href="https://hdhub4u.courses/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          18. Coolmoviez – Great source for Hindi dubbed and Bollywood
+        </div>
+        <a href="https://www.coolmoviez.autos/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          19. 123movies – Global site to stream latest blockbusters
+        </div>
+        <a
+          href="https://123movieseries.online/"
+          class="glow-btn"
+          target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          20. HDMoviesHub – Trending HD and full movie downloads
+        </div>
+        <a href="https://hdmovieshub.host/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          21. Moviesflix – Top site for full movies and TV shows
+        </div>
+        <a href="https://themoviesflix.st/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          22. Filmyhit – Best for Punjabi, Bollywood & Hollywood movies
+        </div>
+        <a href="https://filmyhit.beer/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          23. MP4moviez – Download dual audio & dubbed movies
+        </div>
+        <a href="https://www.mp4moviez.shoes/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          24. Extramovies – Excellent site for latest dual audio films
+        </div>
+        <a href="https://extramovies.direct/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          25. SDMoviesPoint – HD dual audio movies for free
+        </div>
+        <a href="https://sdmoviespoint.voto/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          26. Yesmovies – Stream trending movies online
+        </div>
+        <a href="https://yesmovies-to.to/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">27. Vegamovies – Movies & web series in HD</div>
+        <a href="https://vegamovies.td/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          28. Afilmywap – Massive collection of Hindi, South, and more
+        </div>
+        <a href="https://www.afilmywap.bot/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          29. HindiLinks4u – Stream and download Hindi dubbed movies
+        </div>
+        <a href="https://hindilinks4u.horse/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      <div class="movie-link">
+        <div class="link-text">
+          30. World4uFree – Classic site for Bollywood, Hollywood, and dubbed
+          movies
+        </div>
+        <a href="https://world4ufree.rodeo/" class="glow-btn" target="_blank"
+          >Click</a
+        >
+      </div>
+
+      
+
+    </main>
+
+    <footer>
+      &copy; 2025 | Created by ✌𝓜𝓻.𝓝𝓸𝓫𝓸𝓭𝔂✌ ✨ | <a href="#">Privacy Policy</a>
+    </footer>
+  </body>
+</html>
